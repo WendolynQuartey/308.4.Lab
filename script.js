@@ -5,23 +5,28 @@ let row = [];
 let csvArray = [];
 
 for (let i = 0; i < csvData.length; i++) {
-   // console.log("csvData[i]: ", csvData[i]);
-   // console.log("Cell: ", cell);
+   console.log("csvData[i]: ", csvData[i]);
+   console.log("i: ", i);
+   console.log("Cell: ", cell);
    if (csvData[i] === ','){ // check if the value of  csvData at index i is equal to the chracter ','
       row.push(cell);
-      // console.log("Row: ", row);
+      console.log("Row: ", row);
       cell = "";
    } 
    else if (csvData[i] === '\n' || i == csvData.length-1){
+      if(i == csvData.length-1){
+          cell += csvData[i];
+      }
       row.push(cell);
       csvArray.push(row);
       row = [];
       cell = "";
    } else {
-      cell += csvData[i];   // add the value of csvData at index i 
+      cell += csvData[i];   // add the value of csvData at index i
    }
 }
 
 console.log(csvArray);
+console.log(csvData.length-1);
 
 
