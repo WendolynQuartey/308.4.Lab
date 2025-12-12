@@ -70,7 +70,33 @@ newArray.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" })
 console.log(newArray);
 
 
-newArray.join(",")
-console.log(newArray);
+// Finally, use the values of each object within the array and the array’s length property 
+// to calculate the average age of the group. This calculation should be accomplished using a loop.
+let totalAges = 0;
+for (let i = 0; i < newArray.length; i++){
+   totalAges += parseInt(newArray[i].age);
+}
+let average = totalAges/newArray.length;
+console.log(average); // should output 50.8
+
+
+// Part 5
+
+// // Transform the final set of data back into CSV format.
+
+let newData = ``;
+
+for (let i = 0; i < newArray .length; i++){
+   if(i === 0){
+      newData += Object.keys(newArray[i])  + ",";
+      newData += "\n";
+   } else{
+      newData += Object.values(newArray[i]) + ",";
+      newData += "\n";
+   }
+}
+
+console.log(newData);
+
 
 
