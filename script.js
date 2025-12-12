@@ -53,5 +53,24 @@ for (let i = 1; i < csvArray.length; i++) {
 console.log(newArray);
 
 
+// Part 4
+
+// // Remove the last element from the sorted array.
+newArray.pop();
+console.log(newArray);
+
+// // Insert the following object at index 1:
+// // // { id: "48", name: "Barry", occupation: "Runner", age: "25" }
+newArray.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" } )
+console.log(newArray);
+
+// // Add the following object to the end of the array:
+// // // { id: "7", name: "Bilbo", occupation: "None", age: "111" }
+newArray.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" })
+console.log(newArray);
+
+
+newArray.join(",")
+console.log(newArray);
 
 
